@@ -1,0 +1,27 @@
+server:
+  port: 7005
+  tomcat:
+    max-threads: 1000
+    min-spare-threads: 30
+    max-http-post-size: -1 # 解除tomcat上传文件的大小限制，在Springmvc中进行控制
+  uri-encoding: utf-8
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://49.232.143.16:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+
+  redis:
+    host: 49.232.143.16
+    port: 6379
+    password: 123456
+    database: 0
+    timeout:  500
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0

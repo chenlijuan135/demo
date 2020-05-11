@@ -24,4 +24,13 @@ public class Role {
 
     @TableField(value = "role_desc")
     String roleDesc;
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
 }
